@@ -1,0 +1,8 @@
+PS C:\Users\murat> python ticketsales_pipeline.py
+C:\Users\murat\ticketsales_pipeline.py:62: UserWarning: pandas only supports SQLAlchemy connectable (engine/connection) or database string URI or sq
+lite3 DBAPI2 connection. Other DBAPI2 objects are not tested. Please consider using SQLAlchemy.                                                       poptix_df = pd.read_sql_query("SELECT event_name, SUM(num_tickets) AS total_sales FROM tixy.event_sales GROUP BY event_name ORDER BY SUM(num_ticke
+ts) DESC LIMIT 3;", connection)                                                                                                                     The top 3 most popular events by August 2020 ticket sales:
+                                   event_name  total_sales
+0           Washington Spirits vs Sky Blue FC          5.0
+1                       Christmas Spectacular          5.0
+2  The North American International Auto Show          4.0
